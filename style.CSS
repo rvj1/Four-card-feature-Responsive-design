@@ -1,31 +1,59 @@
 body{
     font-family: poppins;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .headings{
+    align-items: center;
     text-align: center;
-    width: 100%;
+    width: 38%;
+}
+
+.heading1{
+    font-size: 2em;
+    margin-bottom: 0px;
+    font-weight: 250;
+    color: hsl(234, 12%, 34%);
+}
+
+.heading2{
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+.para{
+    color: hsl(229, 6%, 66%);
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 .boxes{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(4, 200px);
     gap: 25px;
-    margin-right: 250px;
-    margin-left: 250px;
+    
 }
 
 .box-heading {
     font-weight: 700;
     padding-left: 30px;
     padding-top: 10px;
+    color: hsl(234, 12%, 34%);
+    font-weight: 650;
 }
 
 .box-para{
     padding-left: 30px;
     font-size: 0.75em;
     padding-right: 20px;
+    color: hsl(229, 6%, 66%);
 }
 
 .img{
@@ -42,20 +70,70 @@ body{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.396);
     position: relative;
     border-radius: 8px;
+    width: 90%;
+    border-top: solid 5px;
 }
 
 .box:nth-child(1){
     grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: hsl(180, 62%, 55%);
 }
 
 .box:nth-child(2){
     grid-column: 2;
+    color: hsl(0, 78%, 62%);
 }
 
 .box:nth-child(3){
     grid-column: 2;
+    color: hsl(34, 97%, 64%);
 }
 
 .box:nth-child(4){
     grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: hsl(212, 86%, 64%);
+}
+
+@media (min-width: 375px) and (max-width: 800px) {
+
+    .headings{
+        width: 90%;
+    }
+
+    .heading1{
+    font-size: 1.5em;
+    }
+
+    .heading2{
+        font-size: 1.5em;
+    }
+
+    .para{
+        font-size: 0.8em;
+    }
+
+    .box:nth-child(1){
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .box:nth-child(2){
+        grid-column: 2;
+        grid-row: 2;
+    
+    }
+    
+    .box:nth-child(3){
+        grid-column: 2;
+        grid-row: 3;
+    }
+    
+    .box:nth-child(4){
+        grid-column: 2;
+        grid-row: 4;
+    }
 }
