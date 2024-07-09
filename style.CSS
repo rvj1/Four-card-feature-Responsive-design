@@ -8,9 +8,10 @@ body{
 }
 
 .boxes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 4;
+    gap: 25px;
     margin-right: 250px;
     margin-left: 250px;
 }
@@ -43,6 +44,7 @@ body{
     height: 220px;
     position: relative;
     border-radius: 8px;
+    grid-column: 1;
 }
 
 .box2{
@@ -52,6 +54,7 @@ body{
     position: relative;
     border-radius: 8px;
     margin-bottom: 0px;
+    grid-column: 2;
 }
 
 .box3{
@@ -60,7 +63,7 @@ body{
     height: 220px;
     position: relative;
     border-radius: 8px;
-    margin-top: 50px;
+    grid-column: 2;
 }
 
 .box4{
@@ -70,4 +73,7 @@ body{
     position: relative;
     border-radius: 8px;
     margin-top: 0px;
+    grid-column: 3;
+    grid-row: 1;
+
 }
